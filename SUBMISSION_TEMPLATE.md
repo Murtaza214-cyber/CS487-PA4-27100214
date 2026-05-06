@@ -91,7 +91,6 @@ Description: The CLI output confirms the successful push of all three container 
 
 ## Task 3: Durable Function Implementation (12 points)
 
-### Evidence 3.1: Completed Function Code
 ### Evidence 3.2: Local Function Handler Listing
 
 ![Portal Function List](docs/portal-functions-list.png)
@@ -108,6 +107,9 @@ Description: The Azure Portal displays the discovered function triggers, confirm
 ![Function App Container Settings 2](docs/func-container-settings-2.png)
 
 Description: The Deployment Center settings confirm the Function App is configured to pull the authenticated `func-app:v1` image from the `pa427100214` registry.
+
+![Functions list](docs/functions-list.png)
+Description: Screenshot of the Functions list in the Portal showing http_starter, my_orchestrator, validate_activity, report_activity
 
 ### Evidence 4.2: Orchestration Smoke Test
 
@@ -146,8 +148,7 @@ Description: The `validate-service` is formally exposed via a LoadBalancer, prov
 ### Evidence 5.4: Validator API Tests
 
 ![Health Check](docs/curl-health.png)
-![Successful Validation](docs/curl-validate-valid.png)
-![Rejected Validation](docs/curl-validate-invalid.png)
+![Validation](docs/curl-validate.png)
 
 Description: The API demonstrates correct behavior by approving valid quantities and rejecting orders that exceed the defined threshold of 100 units.
 
@@ -158,11 +159,6 @@ Description: The API demonstrates correct behavior by approving valid quantities
 
 Description: The environment variable `VALIDATE_URL` has been successfully applied to the Function App, enabling connectivity to the AKS LoadBalancer.
 
-### Evidence 5.6: AKS Idle Behavior
-
-![AKS Node State](docs/aks-nodes-state.png)
-
-Description: The cluster remains provisioned while idle, maintaining the node state to ensure consistent availability for the validation activity.
 
 ---
 
@@ -176,21 +172,20 @@ Description: The Azure CLI output confirms the successful creation of the `repor
 
 ### Evidence 6.2: Manual ACI Run
 
-![Manual ACI Test State](docs/az-container-list-test.png)
+![Manual ACI Test State](docs/Screenshot%20of%20az%20container%20show.png.png)
 
 Description: The `ci-report-test` instance reached a "Succeeded" state, verifying that the `report-job` image can execute successfully in a serverless environment.
 
 ### Evidence 6.3: ACI Logs
 
-![Reporting Job Logs](docs/aci-logs-trace.png)
+![Reporting Job Logs](docs/View%20logs%20from%20the%20container.png)
 
-Description: The detailed logs confirm that the ACI container successfully authenticated with Managed Identity and completed the PDF generation process.
 
 ### Evidence 6.4: Generated PDF
 
 ![Storage Browser Reports](docs/storage-browser-reports.png)
 
-Description: The storage browser confirms the presence of `TEST-001.pdf` and `ORD-001.pdf`, validating successful write operations to the blob container.
+Description:
 
 ### Evidence 6.5: Function App Managed Identity and IAM
 
@@ -208,13 +203,7 @@ Description: The configuration demonstrates that all required reporting and iden
 
 ## Task 7: End-to-End Pipeline (15 points)
 
-### Evidence 7.1: Web App Wiring
-
-![Web App Settings](docs/frontend-wiring-settings.png)
-
-Description: The Web App is formally integrated with the backend by configuring the `FUNCTION_START_URL` and `FUNCTION_STATUS_URL` in its environment variables.
-
-### Evidence 7.2: Happy Path UI
+### Evidence 7.1: Happy Path UI
 
 ![UI Submission Form](docs/happy-path-ui-form.png)
 ![UI Running Status](docs/happy-path-ui-running.png)
@@ -225,19 +214,25 @@ Description: The dashboard demonstrates a complete orchestration cycle, successf
 
 ### Evidence 7.3: Backend Participation
 
-![Log Stream Grep Trace](docs/backend-logs-chain.png)
+![Log Stream Trace](docs/participation-trace.png)
+![Log Stream Trace](docs/participation-trace-2.png)
 ![Validate Activity Trace](docs/validate-activity-trace.png)
 ![Report Activity Trace](docs/report-activity-trace.png)
-
+![Presence of Reports in Container](docs/test-container.png)
 Description: The filtered log stream provides a formal trace of the order ID as it is successfully validated by the AKS microservice and reported via ACI.
 
 ### Evidence 7.4: Reject Path UI
 
 ![Rejected Order Dashboard](docs/reject-path-ui.png)
+![Rejected trace](docs/Rejected%20trace.png)
+![Rejected trace](docs/Rejected%20trace%202.png.png)
 
 Description: The frontend correctly communicates the rejection status when the validation activity identifies a quantity exceeding 100 units.
 
+### Evidence 7.5: Resource Group
+![Resource Group](docs/resource-group.png)
 ---
+
 
 ## Task 8: Write-up and Architecture Diagram (5 points)
 
