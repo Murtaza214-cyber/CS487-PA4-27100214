@@ -265,5 +265,5 @@ Description: As of May 6, 2026, the total actual consumption for this assignment
 
 ### Question 8.6: Challenges Faced
 
-
+A primary challenge involved subscription security policies blocking the default storage connection string for the Function App. I resolved this by implementing a Managed Identity (mi-pa4-27100214) and updating environment variables to authenticate via Client ID and Account Name. Additionally, the GitHub Actions pipeline failed initially due to configuration errors in the deployment YAML file. I successfully debugged the workflow logs and corrected the YAML file to restore the automated CI/CD path for the App Service.
 ---
