@@ -270,7 +270,5 @@ Description: The AKS cluster is the primary cost driver due to the persistent vi
 
 ### Question 8.6: Challenges Faced
 
-- **Environment-Specific Path Handling**: A notable challenge involved the incorrect conversion of Azure Resource IDs into Windows file paths by the Git Bash terminal. This was mitigated by utilizing the `MSYS_NO_PATHCONV=1` environment variable during CLI operations.
-- **Log Verbositiy**: The high verbosity of Durable Function logs initially hindered monitoring. I addressed this by utilizing `grep` to filter the log stream for critical execution markers.
 
 ---
