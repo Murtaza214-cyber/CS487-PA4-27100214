@@ -15,11 +15,11 @@ Copy this file to <code style="color:#111827;background:#ddd6fe;padding:2px 4px;
 
 | Field | Value |
 |---|---|
-| Name | TODO |
-| Roll Number | TODO |
+| Name | Syed Muhammad Murtaza Hassan |
+| Roll Number | 27100214 |
 | GitHub Repository URL | TODO |
-| Resource Group | `rg-sp26-TODO` |
-| Assigned Region | TODO: `uaenorth` or `ukwest` |
+| Resource Group | `rg-sp26-27100214` |
+| Assigned Region | `ukwest` |
 
 ## Evidence Rules
 
@@ -34,9 +34,7 @@ Copy this file to <code style="color:#111827;background:#ddd6fe;padding:2px 4px;
 
 ### Evidence 1.1: Forked Repository
 
-TODO: Embed screenshot of your forked GitHub repository.
 
-Description: TODO: Explain that this is your working fork and that it contains the PA4 starter structure.
 
 ### Evidence 1.2: App Service Overview
 
@@ -171,12 +169,14 @@ Description: TODO: Explain where generated PDFs are stored.
 TODO: Embed screenshot of `az container show` for `ci-report-test`.
 
 Description: TODO: State the final container state and why the job exits.
+![AKS nodes](docs/Screenshot of az container show.png)
 
 ### Evidence 6.3: ACI Logs
 
 TODO: Embed screenshot of `az container logs`.
 
 Description: TODO: Explain what the report job printed after generating and uploading the PDF.
+![AKS nodes](docs/View Logs from the container.png)
 
 ### Evidence 6.4: Generated PDF
 
