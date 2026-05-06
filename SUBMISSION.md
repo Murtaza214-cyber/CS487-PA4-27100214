@@ -141,7 +141,7 @@ Description: The evidence shows the `validate-deployment` pod in a "Running" sta
 
 ### Evidence 5.3: Kubernetes Service
 
-![Kubernetes Service Details](docs/aks-get-service.png)
+![Kubernetes Service Details](docs/aks-get-service..png)
 
 Description: The `validate-service` is formally exposed via a LoadBalancer, providing a persistent External-IP for the Durable Function activity.
 
@@ -219,7 +219,7 @@ Description: The dashboard demonstrates a complete orchestration cycle, successf
 ![Validate Activity Trace](docs/validate-activity-trace.png)
 ![Report Activity Trace](docs/report-activity-trace.png)
 ![Presence of Reports in Container](docs/test-container.png)
-Description: The filtered log stream provides a formal trace of the order ID as it is successfully validated by the AKS microservice and reported via ACI.
+Description: The log stream provides a formal trace of the order ID as it is successfully validated by the AKS microservice and reported via ACI.
 
 ### Evidence 7.4: Reject Path UI
 
