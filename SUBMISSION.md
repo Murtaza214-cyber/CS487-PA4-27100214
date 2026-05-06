@@ -244,7 +244,7 @@ Description: The diagram illustrates the service interdependencies across App Se
 
 ### Question 8.2: Service Selection
 
-- **App Service**: Chosen for the React frontend to leverage managed platform features and seamless GitHub Actions integration.
+- **App Service**: Chosen for the frontend to leverage managed platform features and seamless GitHub Actions integration.
 - **Durable Functions**: Utilized to manage the complex, stateful orchestration required to chain separate cloud services.
 - **AKS**: Selected to host the validator API as a dedicated, high-availability microservice.
 - **ACI**: Optimal for the reporting job as a consumption-based, ephemeral container service that bills only during active execution.
@@ -261,7 +261,7 @@ Durable Functions provide robust state management and automated retries, prevent
 
 ![Resource Group Overview](docs/resource-group-overview.png)
 
-Description: The AKS cluster is the primary cost driver due to the persistent virtual machine resources required for the node pool.
+Description: As of May 6, 2026, the total actual consumption for this assignment is $1.78, with a projected monthly forecast of $12.47. Although the App Service Web App currently appears as the primary cost driver ($1.60) due to initial provisioning and security overhead, the AKS cluster is architecturally the most expensive resource in the pipeline. While its current cost appears negligible in this short-term snapshot, AKS relies on persistent Virtual Machine nodes that incur continuous hourly charges. In a sustained deployment, these fixed compute costs would significantly exceed the consumption-based billing models of the Function App and ACI instances.
 
 ### Question 8.6: Challenges Faced
 
