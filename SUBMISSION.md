@@ -172,16 +172,16 @@ Description: The Azure CLI output confirms the successful creation of the `repor
 
 ### Evidence 6.2: Manual ACI Run
 
-![Manual ACI Test State](docs/Screenshot%20of%20az%20container%20show.png.png)
+![Manual ACI Test State](docs/container-show.png.png)
 
 Description: The `ci-report-test` instance reached a "Succeeded" state, verifying that the `report-job` image can execute successfully in a serverless environment.
 
-### Evidence 6.3: ACI Logs
+### Evidence 6.3: Generated PDF
 
 ![Reporting Job Logs](docs/View%20logs%20from%20the%20container.png)
 
 
-### Evidence 6.4: Generated PDF
+### Evidence 6.4: ACI Logs
 
 ![Storage Browser Reports](docs/storage-browser-reports.png)
 
